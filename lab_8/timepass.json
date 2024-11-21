@@ -1,0 +1,138 @@
+{
+  "destinations": [
+    {
+      "name": "Kedarnath",
+      "image": "kedarnath.jpg",
+      "description": "Kedarnath is a sacred Hindu pilgrimage site in Uttarakhand, India, known for its ancient temple dedicated to Lord Shiva, nestled in the majestic Himalayas.",
+      "booking_links": {
+        "flights": "flight.html",
+        "trains": "train.html",
+        "buses": "bus.html",
+        "hotels": "hotel.html"
+      },
+      "attractions": [
+        {
+          "name": "Kedarnath Temple",
+          "description": "A major shrine of Hinduism, located at an altitude of 3,583 m, surrounded by snow-capped mountains.",
+          "entry_fees": "Free",
+          "tips": "Visit early in the morning for a peaceful experience."
+        }
+      ]
+    },
+    {
+      "name": "Agra",
+      "image": "agra.jpg",
+      "description": "Agra is a historic city in Uttar Pradesh, India, famous for the iconic Taj Mahal, a UNESCO World Heritage site and one of the Seven Wonders of the World.",
+      "booking_links": {
+        "flights": "flight.html",
+        "trains": "train.html",
+        "buses": "bus.html",
+        "hotels": "hotel.html"
+      },
+      "attractions": [
+        {
+          "name": "Taj Mahal",
+          "description": "The Taj Mahal is a white marble mausoleum built by Mughal Emperor Shah Jahan in memory of his beloved wife Mumtaz Mahal.",
+          "entry_fees": "INR 50 for Indian citizens, INR 1100 for foreign tourists",
+          "tips": "Visit early morning to avoid the crowds."
+        }
+      ]
+    },
+    {
+      "name": "Goa",
+      "image": "goa.jpg",
+      "description": "Goa is a popular coastal state in western India, known for its stunning beaches, vibrant nightlife, Portuguese heritage, and laid-back atmosphere.",
+      "booking_links": {
+        "flights": "flight.html",
+        "trains": "train.html",
+        "buses": "bus.html",
+        "hotels": "hotel.html"
+      },
+      "attractions": [
+        {
+          "name": "Baga Beach",
+          "description": "One of the most popular beaches in Goa, known for its lively atmosphere and water sports.",
+          "entry_fees": "Free",
+          "tips": "Visit in the evening for beach shacks and nightlife."
+        }
+      ]
+    },
+    {
+      "name": "Rajasthan",
+      "image": "rajasthan.jpg",
+      "description": "Rajasthan is a vibrant state in northwest India, known for its rich cultural heritage, grand palaces, majestic forts, and expansive deserts, reflecting the royal history of the Rajput kings.",
+      "booking_links": {
+        "flights": "flight.html",
+        "trains": "train.html",
+        "buses": "bus.html",
+        "hotels": "hotel.html"
+      },
+      "attractions": [
+        {
+          "name": "Jaipur (The Pink City)",
+          "description": "Jaipur’s enchanting blend of history, culture, and vibrant urban life makes it a captivating destination for travelers seeking to experience the essence of Rajasthan.",
+          "entry_fees": "Separate fees for Indian citizens and foreign tourists. Additional fees for photography.",
+          "tips": "Elephant Ride: Experience an elephant ride up to the fort entrance.Guide: Hire a guide to learn about the fort’s history and architectural details."
+        },
+        {
+          "name": "Hawa Mahal",
+          "description": "The Palace of Winds, known for its unique façade with numerous windows allowing royal ladies to observe street life discreetly.",
+          "what_to_see": [
+            "The intricate latticework and panoramic views of the city from the upper floors."
+          ],
+          "tips": "Visit early in the morning or late afternoon for the best light and fewer crowds."
+        }
+      ]
+    },
+    {
+      "name": "Kashmir",
+      "image": "kashimar.jpg",
+      "description": "Kashmir is a picturesque region in northern India, renowned for its stunning landscapes, lush valleys, and the serene beauty of its lakes and mountains, often referred to as Paradise on Earth.",
+      "booking_links": {
+        "flights": "flight.html",
+        "trains": "train.html",
+        "buses": "bus.html",
+        "hotels": "hotel.html"
+      },
+      "attractions": [
+        {
+          "name": "Dal Lake",
+          "description": "A famous lake in Srinagar known for its houseboats, shikaras, and picturesque views.",
+          "entry_fees": "Free (Houseboat and Shikara charges apply)",
+          "tips": "Best time to visit is early morning for a peaceful shikara ride."
+        },
+        {
+          "name": "Gulmarg",
+          "description": "A popular skiing destination in winter and a beautiful meadow in summer.",
+          "entry_fees": "Free (Skiing and Gondola ride charges apply)",
+          "tips": "Visit in winter for skiing or in summer for a pleasant retreat."
+        }
+      ]
+    },
+    {
+      "name": "India Gate",
+      "image": "india_gate.jpg",
+      "description": "India Gate is a prominent war memorial in New Delhi, India, honoring the soldiers of the British Indian Army who died in World War I, and is a symbol of national pride and sacrifice.",
+     "booking_links": {
+        "flights": "flight.html",
+        "trains": "train.html",
+        "buses": "bus.html",
+        "hotels": "hotel.html"
+      },
+      "attractions": [
+        {
+          "name": "India Gate",
+          "description": "A 42-meter-high archway located at the heart of New Delhi, surrounded by lush gardens.",
+          "entry_fees": "Free",
+          "tips": "Visit in the evening to see the monument beautifully illuminated."
+        },
+        {
+          "name": "Rajpath",
+          "description": "A ceremonial boulevard that leads to Rashtrapati Bhavan, used for the annual Republic Day parade.",
+          "entry_fees": "Free",
+          "tips": "Walk down Rajpath for a majestic view of India Gate and Rashtrapati Bhavan."
+        }
+      ]
+    }
+  ]
+}

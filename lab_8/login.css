@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('nature.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.logo {
+  width: 50px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.nav-brand {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.wrapper {
+  background:  rgba(233, 247, 255, 0.8); 
+  width: 420px;
+  color: #000000;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+.wrapper h1 {
+  text-align: center;
+  font-size: 36px; /* Corrected property */
+}
+
+.input-box {
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+  position: relative; /* Ensure icon positioning */
+}
+
+.input-box input {
+  width: 90%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid grey;
+  border-radius: 20px;
+  color: #000000;
+  font-size: 16px;
+  padding: 20px;
+}
+
+.input-box i {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #000000;
+}
+
+.input-box input::placeholder {
+  color: rgb(0, 0, 0);
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin-bottom: 15px;
+}
+
+.remember-forgot label input {
+  accent-color: #000000;
+}
+
+.remember-forgot a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  height: 35px;
+  background: rgb(122, 172, 207);
+  border: none;
+  border-radius: 40px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.register {
+  font-size: 14.5px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #060606;
+}
+
+.register a:hover {
+  text-decoration: underline;
+}
