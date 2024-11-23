@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+	<title>Form Reviews</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Poppins', sans-serif;
+		}
+
+		body {
+			min-height: 100vh;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-image: url('nature.jpg');
+			background-size: cover;
+			background-position: center;
+			position: relative;
+		}
+
+		.header {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			display: flex;
+			align-items: center;
+			z-index: 1;
+		}
+
+		.logo {
+			width: 50px;
+			margin-right: 10px;
+			border-radius: 10px;
+		}
+
+		.nav-brand {
+			color: #000;
+			text-decoration: none;
+			font-size: 1.2rem;
+		}
+
+		.wrapper {
+			background-color: rgba(233, 247, 255, 0.8);/* Slightly more opaque background */
+			padding: 2rem;
+			max-width: 576px;
+			width: 100%;
+			border-radius: .75rem;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			text-align: center;
+			backdrop-filter: blur(10px); /* Apply blur effect */
+			-webkit-backdrop-filter: blur(10px); /* For Safari */
+		}
+		
+		.wrapper h3 {
+			font-size: 1.5rem;
+			font-weight: 600;
+			margin-bottom: 1rem;
+		}
+
+		.rating {
+			display: inline-block;
+			font-size: 0;
+			position: relative;
+			text-transform: capitalize;
+			padding: 0 50px 8%;
+			color: gray;
+		}
+
+		label {
+			float: right;
+			padding: 0;
+			font-size: 50px;
+			cursor: pointer;
+		}
+
+		label::before {
+			content: "\2606";
+			padding-bottom: 8px;
+			display: inline-block;
+			transition: 0.2s;
+		}
+
+		span {
+			opacity: 0;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			text-align: center;
+			height: 20px;
+			font-size: 1rem;
+			white-space: nowrap;
+			transition: 0.15s ease-out;
+			pointer-events: none;
+			letter-spacing: -2px;
+		}
+
+		label:hover span {
+			opacity: 1;
+			transform: none;
+			letter-spacing: 0;
+		}
+
+		input:checked ~ label::before {
+			content: "\2605";
+			color: rgb(0, 149, 255);
+			filter: drop-shadow(0 0 4px);
+		}
+
+		textarea {
+			width: 100%;
+			background: #f9f9f9;
+			padding: 1rem;
+			border-radius: .5rem;
+			border: 1px solid #ddd; /* Border for textarea */
+			outline: none;
+			resize: none;
+			margin-bottom: .5rem;
+		}
+
+		.btn-group {
+			display: flex;
+			grid-gap: .5rem;
+			align-items: center;
+			justify-content: center; /* Center buttons */
+		}
+
+		.btn-group .btn {
+			padding: .75rem 1rem;
+			border-radius: .5rem;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			font-size: .875rem;
+			font-weight: 500;
+		}
+
+		.btn-group .btn.submit {
+			background: #007bff;
+			color: #fff;
+		}
+
+		.btn-group .btn.submit:hover {
+			background: #0056b3;
+		}
+
+		.btn-group .btn.cancel {
+			background: #fff;
+			color: #007bff;
+		}
+
+		.btn-group .btn.cancel:hover {
+			background: #f1f1f1;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<img class="logo" src="logo.jpg" alt="Logo">
+		<a class="nav-brand" href="index.html">VVP Travel</a>
+	</div>
+
+	<div class="wrapper">
+		<div class="rate">
+			<h3>Rate us</h3>
+		</div>
+		<form action="#">
+			<div class="rating">
+				<input type='radio' hidden name='rate' id='rating-opt5' data-idx='0'>	
+				<label for='rating-opt5'><span>Very satisfied</span></label>
+
+				<input type='radio' hidden name='rate' id='rating-opt4' data-idx='1'>
+				<label for='rating-opt4'><span>Somewhat satisfied</span></label>
+
+				<input type='radio' hidden name='rate' id='rating-opt3' data-idx='2'>
+				<label for='rating-opt3'><span>Neutral</span></label>
+
+				<input type='radio' hidden name='rate' id='rating-opt2' data-idx='3'>
+				<label for='rating-opt2'><span>Dissatisfied</span></label>
+
+				<input type='radio' hidden name='rate' id='rating-opt1' data-idx='4'>
+				<label for='rating-opt1'><span>Very Dissatisfied</span></label>
+			</div>
+			<textarea name="opinion" cols="30" rows="5" placeholder="Your opinion..."></textarea>
+			<div class="btn-group">
+				<button type="submit" class="btn submit">Submit</button>
+				<button type="button" class="btn cancel">Cancel</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

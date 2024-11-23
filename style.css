@@ -1,0 +1,342 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color:rgb(255, 255, 255) ;
+}
+.logo {
+  width: 50px;
+  margin-left: 0%;
+  border-radius: 10px;
+}
+.navbar-toggler-icon {
+background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%23ffffff"%3E%3Cpath d="M10 20h80v10H10zM10 45h80v10H10zM10 70h80v10H10z"/%3E%3C/svg%3E');
+}
+.navbar-toggler {
+background-color: rgb(194, 218, 236);
+}
+
+
+.navbar {
+background-color: rgb(0, 0, 0) !important;
+}
+
+.navbar-brand {
+color: white !important;
+font-weight: bold;
+padding: 10px;
+}
+.navbar-nav{
+margin-left: 30px !important;
+}
+.nav-link {
+text-decoration: none;
+color: rgb(255, 255, 255) !important;
+font-weight: bold;
+transition: 0.1s ease ease-in-out;
+margin-left: 20px;
+margin-top: 10px;
+}
+
+.nav-link:hover {
+background-color: rgb(122, 172, 207);
+color: black !important;
+}
+
+.profil {
+height: 50px;
+width: 50px;
+border-radius: 50%;
+margin-left: 10px;
+margin-top: 8px;
+}
+
+@media (max-width: 992px) {
+.navbar-nav {
+  flex-direction: column;
+  width: 100%;
+}
+
+.nav-item {
+  width: 100% !important;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.search input {
+  width: 80%;
+  margin: 10px auto;
+}
+
+.profil {
+  margin: 10px auto;
+}
+}
+
+@media (max-width: 768px) {
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  padding: 10px 0;
+}
+}
+
+@media (max-width: 576px) {
+.search input {
+  width: 100%;
+}
+
+.navbar-toggler {
+  margin-left: auto;
+}
+}
+
+.main {
+width: 100%;
+height: 70vh; 
+background-image: url(back3.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 20px;
+}
+
+.content1 h1 {
+font-size: 2.5rem;
+color: #ffffff; /* White color for contrast */
+font-family: 'Georgia', serif; /* Example of a more elegant font */
+font-weight:100;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 10); /* Shadow effect for better visibility */
+text-align: center;
+line-height: 1.2;
+margin: 0;
+}
+.content1 h4 {
+color: #ffffff;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 10);
+margin-top: 8px;
+}
+.content1{
+margin-top: 0%;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.25rem;
+}
+.card{
+  margin-top: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  height: 450px;
+
+}
+
+.sec2{
+  height: 70px;
+  border-radius: 30px;
+  display: flex;
+  margin-left: 220px;
+}
+
+.navbar2{
+   height:70px;
+   background-color:  rgb(203, 222, 235);
+}
+@media (max-width: 768px) {
+  .navbar2 {
+    flex-direction: column;
+    height: auto;
+  }
+}
+.flight{
+  height: 50px !important;
+  width: 70px !important;
+  display: flex !important;
+  margin-left: 40px;
+  border-radius: 30px ;
+  margin-top: 10px;
+  box-shadow: none;
+
+}
+.flight:hover{
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
+}
+@media (max-width: 480px) {
+  .flight {
+    height: 40px;
+    width: 60px;
+  }
+}
+.btn1{
+  width: 70px;
+  height: 35px;
+  background:   rgb(122, 172, 207);
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  color: #333;
+  font-weight: 1000;
+  font-size: 16px;
+  margin-left: 400px;
+  margin-top: 10px;
+  box-shadow: none;
+}
+.btn1:hover {
+background-color:rgb(255, 255, 255);
+color: black !important;
+box-shadow: 0 4px 8px rgba(255, 136, 0, 0.3);
+}
+.btn2{
+width: 90px;
+height: 35px;
+background: rgb(122, 172, 207);
+border: none;
+outline: none;
+border-radius: 40px;
+color: #333;
+font-weight: 1000;
+font-size: 16px;
+margin-left: 10px;
+margin-top: 10px;
+box-shadow: none;
+}
+.btn2:hover {
+background-color:rgb(255, 255, 255);
+color: black !important;
+box-shadow: 0 4px 8px rgba(255, 136, 0, 0.3);
+}
+
+#menu{
+  width: 1000px;
+  margin-left: 240px;
+}
+.content{
+  margin-left: 15px;
+  margin-top: 10px;
+}
+.social-icon {
+  margin-right: 40px;
+  height:30px;
+  width: 30px;
+  border-radius: 7px;
+}
+.content-left,
+.content-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.foot {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: rgb(0, 0, 0) !important;
+height: 70px;
+color: rgb(255, 255, 255);
+width: 100%;
+margin-top: 50px;
+}
+
+.search-bar {
+display: flex;
+align-items: center;
+margin-left: 250px;
+}
+
+.search-input {
+padding: 10px;
+font-size: 14px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+.search-btn {
+padding: 10px;
+margin-left: 5px; /* Adjust the margin as needed */
+font-size: 14px;
+background-color: #4682B4; /* Replace with your preferred color */
+color: white;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.search-btn:hover {
+background-color: #315f7a; /* Replace with your preferred hover color */
+}
+
+.search-bar .search-btn {
+margin-left: 5px; /* This will place the button to the right */
+margin-right: 5px; /* Use this instead to place the button on the left */
+}
+
+@media (max-width: 768px) {
+.search-bar {
+  flex-direction: column;
+}
+
+.search-btn {
+  margin-left: 0;
+  margin-top: 10px;
+}
+}
+
+
+/*    */
+@media (max-width: 992px) {
+.btn1, .btn2 {
+  width: 100px; /* Adjust button width for medium screens */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.btn1 {
+  margin-left: 0; /* Reset margin for centered display */
+}
+
+.btn2 {
+  margin-left: 10px; /* Adjust margin for alignment */
+}
+}
+
+@media (max-width: 768px) {
+.btn1, .btn2 {
+  width: 80%; /* Make buttons full width on smaller screens */
+  margin: 5px auto; /* Center and space buttons */
+  font-size: 14px; /* Adjust font size for readability */
+  height: 30px; /* Reduce button height */
+}
+
+.btn1 {
+  margin-left: 0; /* Center button on small screens */
+}
+
+.btn2 {
+  margin-left: 0; /* Center button on small screens */
+}
+}
+
+@media (max-width: 576px) {
+.btn1, .btn2 {
+  width: 100%; /* Full width for very small screens */
+  margin: 5px 0; /* Space between buttons */
+  font-size: 12px; /* Smaller font size */
+  height: 25px; /* Smaller button height */
+}
+}
+
+
+
+

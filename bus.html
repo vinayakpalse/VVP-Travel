@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Search</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar {
+            background-color: black;
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+        }
+        .navbar-nav .nav-link:hover {
+            background-color: rgb(122, 172, 207);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Bus Search</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="destinations.html">Destination</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact_us.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2>Find Buses</h2>
+        <form id="searchForm">
+            <div class="form-group">
+                <label for="destination">Destination:</label>
+                <select id="destination" class="form-control" required>
+                    <option value="">Select a destination</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="departureDate">Departure Date:</label>
+                <input type="date" id="departureDate" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="adults">Number of Adults:</label>
+                <select id="adults" class="form-control" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+        <div id="results" class="mt-4"></div>
+        <div style="width: 90%; height: 400px; overflow: hidden;padding: 10px;">
+            <video autoplay muted style="width: 100%; height: 100%; object-fit: cover;margin-left: 175px;">
+                <source src="bus.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div style="width:100%; height:25px;background-color: black;">
+
+        </div>
+        
+        
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Fetch the destination data from destinations.json
+            fetch('timepass.json')
+                .then(response => response.json())
+                .then(data => {
+                    const destinationSelect = document.getElementById('destination');
+
+                    // Populate the dropdown with destinations from the JSON
+                    data.destinations.forEach(destination => {
+                        const option = document.createElement('option');
+                        option.value = destination.name;
+                        option.textContent = destination.name;
+                        destinationSelect.appendChild(option);
+                    });
+                });
+
+            const busesData = {
+                "Agra": [
+                    { company: "Bus Co A", bus: "Agra123", price: "Rs.100", times: generateBusTimes("2024-09-01", "2024-09-30") },
+                    { company: "Bus Co B", bus: "Agra456", price: "Rs.120", times: generateBusTimes("2024-09-01", "2024-09-30") }
+                ],
+                "Goa": [
+                    { company: "Bus Co C", bus: "Goa789", price: "Rs.130", times: generateBusTimes("2024-09-01", "2024-09-30") },
+                    { company: "Bus Co D", bus: "Goa012", price: "Rs.140", times: generateBusTimes("2024-09-01", "2024-09-30") }
+                ]
+            };
+
+            function generateBusTimes(start, end) {
+                const times = [];
+                const startDate = new Date(start);
+                const endDate = new Date(end);
+
+                for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
+                    const time = new Date(d);
+                    time.setHours(Math.floor(Math.random() * 24), Math.floor(Math.random() * 60));
+                    const formattedDate = time.toISOString().split('T')[0];
+                    const formattedTime = time.toTimeString().split(' ')[0];
+                    times.push({ date: formattedDate, time: formattedTime });
+                }
+
+                return times;
+            }
+
+            document.getElementById('searchForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const destination = document.getElementById('destination').value;
+                const departureDate = document.getElementById('departureDate').value;
+                const adults = document.getElementById('adults').value;
+
+                if (destination && departureDate && adults) {
+                    const buses = busesData[destination] || [];
+                    let resultsHTML = `<h3>Available Buses to ${destination}</h3>
+                                       <p>Departure Date: ${departureDate}</p>
+                                       <p>Number of Adults: ${adults}</p>`;
+
+                    if (buses.length > 0) {
+                        resultsHTML += '<ul class="list-group">';
+                        buses.forEach(bus => {
+                            resultsHTML += `<li class="list-group-item">
+                                                <strong>Company:</strong> ${bus.company} <br>
+                                                <strong>Bus:</strong> ${bus.bus} <br>
+                                                <strong>Price:</strong> ${bus.price} <br>
+                                                <strong>Times:</strong> ${bus.times.map(t => `${t.date} ${t.time}`).join(', ')}
+                                              </li>`;
+                        });
+                        resultsHTML += '</ul>';
+                    } else {
+                        resultsHTML += '<p>No buses available for the selected destination.</p>';
+                    }
+
+                    document.getElementById('results').innerHTML = resultsHTML;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
